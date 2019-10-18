@@ -20,7 +20,11 @@ class FlaskTestCase(unittest.TestCase):
 
     def test_uppercase(self):
         response = self.app.get('/touppercase?s=hoi').data.decode()
-        self.assertEqual(response,'HOI','Uppercase endpoint should be HOI')
+        self.assertEqual(response,'HOI','toUpper(hoi) != HOI')
+
+    def test_hello(self):
+        response = self.app.get('/hello').data.decode()
+        self.assertEqual(response,'Hello World','Should return Hello World')
 
     # TODO DEFINE TWO MORE TESTS ON THE END POINTS
 
