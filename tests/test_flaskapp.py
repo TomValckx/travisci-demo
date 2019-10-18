@@ -23,7 +23,7 @@ class FlaskTestCase(unittest.TestCase):
         self.assertEqual(response,'HOI','toUpper(hoi) != HOI')
 
     def test_hello(self):
-        response = self.app.get('/hello').data.decode()
+        response = self.app.get('/').data.decode()
         self.assertEqual(response,'Hello World!','Should return Hello World!')
 
     # TODO DEFINE TWO MORE TESTS ON THE END POINTS
