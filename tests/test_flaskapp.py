@@ -24,7 +24,7 @@ class FlaskTestCase(unittest.TestCase):
 
     def test_hello(self):
         response = self.app.get('/hello').data.decode()
-        self.assertEqual(response,'Hello World','Should return Hello World')
+        self.assertEqual(response,'Hello World!','Should return Hello World!')
 
     # TODO DEFINE TWO MORE TESTS ON THE END POINTS
 
